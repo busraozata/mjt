@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MJT</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css" rel="stylesheet" />
-
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
@@ -37,7 +37,7 @@
             <div class="header-inner d-flex justify-content-center align-items-center">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12 d-flex align-items-center justify-content-start">
+                        <div class="col-lg-12 header-area d-flex align-items-center justify-content-start">
                             <a class="navbar-brand" href="#"><img src="./img/logo.png" class="img-fluid" alt="logo"></a>
                             <nav class="d-flex align-items-center justify-content-center">
                                 <button id="toggle-btn"><i class="fa fa-bars"></i> </button>
@@ -57,11 +57,23 @@
                                         </li>
                                         <li><a href="#" class="nav-link">İletişim</a></li>
                                     </ul>
-                                    <ul class="language-area d-flex align-items-start">
-                                        <img src="./img/world.png" class="img-fluid" alt="language">
-                                        <li><button class="active"> TR</button></li>
-                                        <li><button>EN</button></li>
-                                    </ul>
+                                  
+                                    <div class="language-area landropdown align-items-center justify-content-center">
+                                        <button class="dropdown-button" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                            TR <i class="fa-solid fa-chevron-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                            <li>
+                                                <a class="dropdown-item" type="button" href="#">EN</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" type="button" href="#">TR</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" type="button" href="#">DE</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </nav>
 
@@ -73,7 +85,7 @@
     </header>
     <section class="banner">
         <div class="row">
-            <div class="col-lg-6 col-md-6 d-flex justify-content-center align-items-center">
+            <div class="col-lg-6 col-md-12 banner-text d-flex justify-content-center align-items-center">
                 <div class="content d-flex flex-column justify-content-center align-items-center">
                     <div class="img-wrapper">
                         <img src="./img/border.png" class="img-fluid img-border" alt="">
@@ -92,7 +104,7 @@
 
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-6 col-md-6 d-none d-lg-block">
                 <div class="swiper mySwiperBanner">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" style="background-image: url(./img/banner.png);  background-position: right; background-repeat: no-repeat; background-size: cover;">
@@ -167,7 +179,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>HİZMETLERİMİZ</h2>
+                    <div class="d-flex justify-content-between w-100 title-top">
+                        <h2>HİZMETLERİMİZ</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendi ultrices gravida. Risus commodo viverra maecenas accumsan lacus vellisis.</p>
+                    </div>
                     <div class="swiper-container">
                         <div class="swiper ourServices">
                             <div class="swiper-wrapper">
@@ -243,11 +258,47 @@
                                 <div class="swiper-slide">
                                     <div class="box">
                                         <img src="./img/service.png" class="img-fluid service-img" alt="">
+                                        <div class="content-text">
+                                            <div class="title d-flex align-items-center">
+                                                <div class="icon">
+                                                    <img src="./img/dentist-icon2.png" class="img-fluid icon-image" alt="icon">
+                                                </div>
+                                                <a href="">
+                                                    <h4>İmplant</h4>
+                                                </a>
+                                            </div>
+                                            <div class="sub-content">
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                                </div>
+                                                <a href="">
+                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="box">
                                         <img src="./img/service.png" class="img-fluid service-img" alt="">
+                                        <div class="content-text">
+                                            <div class="title d-flex align-items-center">
+                                                <div class="icon">
+                                                    <img src="./img/dentist-icon3.png" class="img-fluid icon-image" alt="icon">
+                                                </div>
+                                                <a href="">
+                                                    <h4>Diş Temizliği</h4>
+                                                </a>
+                                            </div>
+                                            <div class="sub-content">
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                                </div>
+                                                <a href="">
+                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -273,7 +324,6 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendi ultrices gravida. Risus commodo viverra maecenas accumsan lacus vellisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendi ultrices gravida. Risus commodo viverra maecenas accumsan lacus vellisis. Lorem ipsum dolor sit amet.
                         </p>
                         <p>
-
                             consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendi ultrices gravida. Risus commodo viverra maecenas accumsan lacus vellisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                         </p>
                         <a href="#" class="btn">Devam Et <i class="fa-solid fa-chevron-right"></i></a>
@@ -294,8 +344,6 @@
                                                                   C97.3,23.7,75.7,2.3,49.9,2.5"></path>
                                             <path class="icon" fill="white" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"></path>
                                         </svg>
-
-                                        <!-- <div class="play-icon"> <img class="img1" src="http://192.168.0.98/ayewind2.0/images/play.svg">  </div> -->
 
                                     </div>
                                 </a>
@@ -322,7 +370,7 @@
                     </div>
 
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="twentytwenty-container">
                         <img src="./img/before.jpg" class="img-fluid" style="object-fit: cover;">
                         <img src="./img/after.jpg" class="imd-fluid" style="object-fit: cover;">
@@ -332,7 +380,7 @@
                         od tempor incididunt ut labore et dolore magna aliqua. Quis ipsu
                         suspendisse ultrices gravida. Risus commodo viverra maecenas umsan lacus vel facilisis. </p>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="twentytwenty-container">
                         <img src="./img/before.jpg" class="img-fluid" style="object-fit: cover;">
                         <img src="./img/after.jpg" class="imd-fluid" style="object-fit: cover;">
@@ -342,7 +390,7 @@
                         od tempor incididunt ut labore et dolore magna aliqua. Quis ipsu
                         suspendisse ultrices gravida. Risus commodo viverra maecenas umsan lacus vel facilisis. </p>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="twentytwenty-container">
                         <img src="./img/before.jpg" class="img-fluid" style="object-fit: cover;">
                         <img src="./img/after.jpg" class="imd-fluid" style="object-fit: cover;">
@@ -372,19 +420,27 @@
                         <div class="row align-items-center">
 
                             <div class="col-lg-12">
-                                <form>
-                                    <div class="form-group d-flex align-items-center justify-content-between">
-                                        <input type="email" class="form-control">
-                                        <div class="email-button">
-                                            <button class="ripple">
-                                                ABONE OL
-                                            </button>
+                                <form class="w-100 d-flex flex-column justify-content-start align-items-start">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group d-flex align-items-center  w-100 ">
+                                                <input type="email" class="form-control">
+                                                <div class="email-button">
+                                                    <button class="ripple">
+                                                        ABONE OL
+                                                    </button>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group form-check d-flex align-items-center">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1"><a href="">Gizlilik
-                                                Sözleşmesi</a>'ni okudum, onaylıyorum</label>
+
+                                        <div class="col-lg-12">
+                                            <div class="form-group form-check d-flex align-items-center w-100 ">
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                <label class="form-check-label" for="exampleCheck1"><a href="">Gizlilik
+                                                        Sözleşmesi</a>'ni okudum, onaylıyorum</label>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </form>
                             </div>
@@ -405,7 +461,7 @@
 
                         </ul>
                     </div>
-                    <div class="col-lg-3 ">
+                    <div class="col-lg-3 d-flex justify-content-center align-items-start column">
                         <div class="">
                             <h5 class="text-left">Kurumsal</h5>
                             <ul>
@@ -418,7 +474,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 d-flex justify-content-center align-items-start column">
                         <div>
                             <h5>Tedavi Yöntemleri</h5>
                             <ul>
@@ -433,7 +489,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 justify-content-center d-flex align-items-start column">
                         <div>
                             <h5>Medya</h5>
                             <ul>

@@ -4,10 +4,12 @@ $(function () {
 
 const menuToggle = document.querySelector("#toggle-btn");
 const navigation = document.querySelector(".nav-menu");
+const headerInner = document.querySelector(".header-inner")
 const listItem = document.querySelectorAll(".list-item");
 menuToggle.onclick = function () {
   menuToggle.classList.toggle("active");
   navigation.classList.toggle("active");
+  headerInner.classList.toggle("bg-white")
 
   if (menuToggle.innerHTML === `<i class="fa-solid fa-xmark"></i>`) {
     menuToggle.innerHTML = `<i class="fa-solid fa-bars"></i>`;
@@ -56,36 +58,16 @@ var swiper = new Swiper(".ourServices", {
       spaceBetween: 40,
     },
     1024: {
-      slidesPerView: 3,
-      spaceBetween: 50,
-    },
-  },
-});
-
-var swiper = new Swiper(".beforeAfter", {
-  spaceBetween: 40,
-
-  loop: true,
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
-    768: {
       slidesPerView: 2,
-      spaceBetween: 40,
+      spaceBetween: 30,
     },
-    1024: {
+    1300: {
       slidesPerView: 3,
       spaceBetween: 50,
     },
   },
 });
+
 $(function () {
   $("#datetimepicker2").datetimepicker({
     format: "DD-MM-YYYY",
@@ -138,9 +120,11 @@ function domReady(fn) {
 }
 
 $(window).scroll(function () {
-  if ($(this).scrollTop() > 20) {
+  if ($(this).scrollTop() > 15) {
     $(".banner .img-wrapper").addClass("show");
   } else {
     $(".banner .img-wrapper").removeClass("show");
   }
 });
+
+
