@@ -278,6 +278,12 @@ header .header-inner nav .nav-menu .navigation {
   }
 }
 
+@media screen and (max-width: 1366px) {
+  header .header-inner nav .nav-menu .navigation {
+    margin-left: 1rem;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   header .header-inner nav .nav-menu .navigation {
     margin-left: 0rem !important;

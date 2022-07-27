@@ -247,6 +247,9 @@ header {
                     @media screen and(max-width:1440px) {
                         margin-left: 3rem;
                     }
+                    @media screen and(max-width:1366px) {
+                        margin-left: 1rem;
+                    }
                     @media screen and(max-width:$xl-breakpoint) {
                         margin-left: 0rem !important;
                         flex-direction: column;
