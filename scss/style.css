@@ -960,6 +960,12 @@ header .header-inner .language-area .dropdown-item:active {
   right: -2rem;
 }
 
+@media screen and (max-width: 991px) {
+  .our-services .title-top h2::after {
+    display: none;
+  }
+}
+
 .our-services .title-top p {
   padding-left: 5rem;
   color: var(--color-brown);

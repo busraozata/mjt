@@ -770,6 +770,9 @@ header {
                 width: 3px;
                 background-color: var(--color-brown);
                 right: -2rem;
+                @media screen and(max-width:$lg-breakpoint) {
+                    display: none;
+                }
             }
         }
         p {
