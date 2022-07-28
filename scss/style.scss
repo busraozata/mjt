@@ -301,6 +301,12 @@ header {
                 font-weight: 500;
                 font-size: 1.3rem;
             }
+            [type="button"],
+            [type="reset"],
+            [type="submit"],
+            button {
+                -webkit-appearance: inherit;
+            }
             .dropdown-menu {
                 @media screen and(max-width:$xl-breakpoint) {
                     border: none;

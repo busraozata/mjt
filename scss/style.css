@@ -382,6 +382,13 @@ header .header-inner .language-area .dropdown-button {
   font-size: 1.3rem;
 }
 
+header .header-inner .language-area [type="button"],
+header .header-inner .language-area [type="reset"],
+header .header-inner .language-area [type="submit"],
+header .header-inner .language-area button {
+  -webkit-appearance: inherit;
+}
+
 @media screen and (max-width: 1200px) {
   header .header-inner .language-area .dropdown-menu {
     border: none;
