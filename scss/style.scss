@@ -213,6 +213,7 @@ header {
 
                 i {
                     font-size: 1.5rem;
+                    color: var(--color-yellow);
                 }
             }
 
@@ -274,7 +275,7 @@ header {
                             cursor: pointer;
                             display: inline-block;
                             position: relative;
-
+                            padding: 1rem 0.8rem;
                             transition: 0.3s all;
                             &.active {
                                 font-weight: bold;
@@ -282,9 +283,16 @@ header {
                             &:hover {
                                 color: var(--color-yellow);
                             }
+                            @media screen and(max-width:1440px) {
+                                font-size: 1.2rem;
+                                padding: 1rem 0.7rem;
+                            }
 
                             @media screen and(min-width:1366px) and (max-width: 1400px) {
                                 font-size: 1.1rem;
+                            }
+                            @media screen and(max-width:$lg-breakpoint) {
+                                padding: 0.3rem 0.7rem;
                             }
                         }
                     }
@@ -293,13 +301,38 @@ header {
         }
 
         .language-area {
-            margin-left: 0.5rem;
+            
+            @media screen and(max-width:$xl-breakpoint) {
+              
+                width: 100%;
+                margin-top: 4rem;
+                position: relative;
+                text-align: center;
+                &:before{
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background-color: var(--color-brown);
+                    position: absolute;
+                    margin-bottom: 1rem;
+                    top: -1rem;
+                    left: 0;
+                    right: 0;
+                }
+              
+            }
             .dropdown-button {
                 background-color: transparent;
                 border: none;
                 color: var(--color-brown);
                 font-weight: 500;
                 font-size: 1.3rem;
+                @media screen and(max-width:1440px) {
+                    font-size: 1.2rem;
+                }
+                @media screen and(max-width:$xl-breakpoint) {
+                    padding-left: 0.5rem;
+                }
             }
             [type="button"],
             [type="reset"],
@@ -328,6 +361,34 @@ header {
                 }
             }
         }
+        .social-media {
+            margin-top: 2rem;
+            padding-left: 0.7rem;
+            @media screen and(max-width:$lg-breakpoint) {
+                justify-content: center !important;
+            }
+            span {
+                color: var(--color-brown);
+                font-size: 1rem;
+                font-weight: 500;
+            }
+            ul {
+                margin-top: 0.7rem;
+                li {
+                    margin-right: 1rem;
+                    a {
+                        transition: 0.3s all;
+                        color: var(--color-brown);
+                        &:hover {
+                            color: var(--color-yellow);
+                        }
+                        i {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -346,6 +407,7 @@ header {
     .banner-text {
         @media screen and(max-width:$lg-breakpoint) {
             justify-content: flex-start !important;
+            position: absolute;
         }
     }
     .content {
@@ -377,7 +439,8 @@ header {
             margin-top: 2rem;
         }
         @media screen and(max-width:$lg-breakpoint) {
-            min-height: 63vh;
+            min-height: 70vh;
+            max-width: 23rem;
         }
 
         .text {
@@ -392,6 +455,9 @@ header {
                 }
                 @media screen and(max-width:$xl-breakpoint) {
                     font-size: 2.2rem;
+                }
+                @media screen and(max-width:$sm-breakpoint) {
+                    font-size: 1.8rem;
                 }
             }
             span {
@@ -451,7 +517,9 @@ header {
         width: 100%;
         height: 100vh;
         position: relative;
-
+        @media screen and(max-width:$lg-breakpoint) {
+            height: 70vh !important;
+        }
         &::before {
             content: "";
             position: absolute;
@@ -469,6 +537,11 @@ header {
             @media screen and(max-width:1024px) {
                 left: -55rem;
                 width: calc(((100vw - 100%) / 0.8) + 100%);
+            }
+
+            @media screen and(max-width:$lg-breakpoint) {
+                background-size: 100% 100% !important;
+                left: -6rem !important;
             }
         }
     }
@@ -521,7 +594,7 @@ header {
 
     .swiper-pagination {
         padding-right: 2rem;
-
+        z-index: 999999;
         @media screen and(max-width:$lg-breakpoint) {
             padding-right: 0.5rem;
         }
@@ -564,8 +637,8 @@ header {
         margin-top: -13rem;
     }
     @media screen and(max-width:$lg-breakpoint) {
-        padding: 1rem 0rem 1rem 0rem;
-        margin-top: -5rem;
+        padding: 0rem 0rem 1rem 0rem;
+        margin-top: 0rem !important;
     }
 
     @media screen and(max-height:700px) {
@@ -601,9 +674,7 @@ header {
 
             @media screen and(max-width:$lg-breakpoint) {
                 margin-top: 0;
-            }
-            @media screen and(max-width:$lg-breakpoint) {
-                margin-top: 0;
+                border-radius: 0rem;
             }
 
             h3 {
@@ -647,6 +718,9 @@ header {
         -webkit-box-shadow: -1px 0px 22px -10px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: -1px 0px 22px -10px rgba(0, 0, 0, 0.75);
         box-shadow: -1px 0px 22px -10px rgba(0, 0, 0, 0.75);
+        @media screen and(max-width:$lg-breakpoint) {
+            border-radius: 0rem;
+        }
         .row {
             margin-left: 0;
             margin-right: 0;
@@ -717,6 +791,9 @@ header {
         .button-area {
             width: 100%;
             padding: 0rem 1rem;
+            @media screen and(max-width:$lg-breakpoint) {
+                width: inherit;
+            }
 
             button {
                 width: 100%;
@@ -790,10 +867,17 @@ header {
             }
         }
     }
-
+    .swiper-container {
+        @media screen and(max-width:$lg-breakpoint) {
+            position: relative !important;
+        }
+    }
     .swiper {
         width: 100%;
         height: 100%;
+        @media screen and(max-width:$lg-breakpoint) {
+            padding: 0rem 1rem;
+        }
         .swiper-slide {
             text-align: center;
             font-size: 18px;
@@ -863,6 +947,15 @@ header {
                 padding: 1.5rem;
                 transition: 0.5s all;
                 z-index: 99;
+                @media screen and(max-width:$lg-breakpoint) {
+                    padding: 1rem;
+                    h4 {
+                        font-size: 1.1rem;
+                    }
+                    .icon-image {
+                        max-width: 2.5rem !important;
+                    }
+                }
                 .icon-image {
                     max-width: 5rem;
                 }
@@ -902,7 +995,10 @@ header {
             width: 2.5rem !important;
             height: 2.5rem !important;
         }
-        @media screen and(max-width:$sm-breakpoint) {
+        @media screen and(max-width:$lg-breakpoint) {
+            top: 50% !important;
+        }
+        @media screen and(max-width:$lg-breakpoint) {
             width: 2rem !important;
             height: 2rem !important;
         }
@@ -934,7 +1030,12 @@ header {
 .why-mjt {
     padding: 3rem 0rem;
     @media screen and(max-width:$xl-breakpoint) {
-        padding: 1rem 0rem;
+        padding: 3rem 1rem;
+    }
+    @media screen and(max-width:$lg-breakpoint) {
+        -webkit-box-shadow: -1px 0px 22px -10px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -1px 0px 22px -10px rgba(0, 0, 0, 0.75);
+        box-shadow: -1px 0px 22px -10px rgba(0, 0, 0, 0.75);
     }
     h2 {
         font-weight: 600;
@@ -1128,7 +1229,7 @@ header {
     padding: 5rem 0rem 10rem 0rem;
     position: relative;
     @media screen and(max-width:$xl-breakpoint) {
-        padding: 2rem 0rem 4rem 0rem;
+        padding: 3rem 1rem 4rem 1rem;
     }
 
     &::before {
@@ -1268,6 +1369,9 @@ footer {
         }
 
         .social-media {
+            @media screen and(max-width:$lg-breakpoint) {
+                justify-content: center !important;
+            }
             li {
                 a {
                     transition: 0.3s all;
@@ -1287,9 +1391,13 @@ footer {
         form {
             .form-group {
                 flex-flow: wrap;
-
+                &.email-group {
+                    @media screen and(max-width:$lg-breakpoint) {
+                        justify-content: center;
+                    }
+                }
                 .form-control {
-                    border: 3px solid var(--color-brown) !important;
+                    border: 2px solid var(--color-brown) !important;
                     background-color: transparent;
                     border-radius: 1.5rem 0rem 0rem 0rem;
 
@@ -1326,7 +1434,7 @@ footer {
                             border-radius: 0rem 2rem 0rem 0rem;
                             padding: 0.6rem 0.8rem;
 
-                            font-size: 1rem;
+                            font-size: 0.9rem;
                         }
                         &:hover {
                             background-color: var(--color-brown);
@@ -1340,6 +1448,7 @@ footer {
                 margin-top: 0.5rem;
                 @media screen and(max-width:$sm-breakpoint) {
                     flex-flow: inherit;
+                    padding-left: 2rem;
                 }
 
                 .form-check-input {
@@ -1361,7 +1470,10 @@ footer {
                     color: var(--color-brown);
                     font-size: 1.1rem;
                     font-weight: 400;
-                    @media screen and(max-width:375px) {
+                    @media screen and(max-width:$sm-breakpoint) {
+                        font-size: 0.9rem;
+                    }
+                    @media screen and(max-width:320px) {
                         margin-top: 1.5rem;
                     }
 
@@ -1378,7 +1490,7 @@ footer {
     .footer-bottom {
         padding: 5rem 0rem;
         @media screen and(max-width:$lg-breakpoint) {
-            padding: 3rem 0rem;
+            padding: 3rem 1rem;
         }
 
         .brand {
@@ -1427,6 +1539,9 @@ footer {
                     &:hover {
                         color: var(--color-yellow) !important;
                     }
+                    @media screen and(max-width:$sm-breakpoint) {
+                        font-size: 0.8rem;
+                    }
                 }
                 i {
                     color: var(--color-brown);
@@ -1440,6 +1555,9 @@ footer {
             letter-spacing: 0.1rem;
             font-family: "Anybody";
             font-size: 1.4rem;
+            @media screen and(max-width:$sm-breakpoint) {
+                font-size: 1.2rem;
+            }
         }
 
         ul {
@@ -1447,14 +1565,17 @@ footer {
                 a {
                     color: var(--color-brown);
 
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                     font-weight: 400;
                     transition: 0.2s;
-                    font-family: "Anybody";
 
                     @media screen and(max-width:$xxl-breakpoint) {
                         font-size: 1rem;
                     }
+                    @media screen and(max-width:$sm-breakpoint) {
+                        font-size: 0.8rem;
+                    }
+
 
                     &:hover {
                         color: var(--color-yellow);
@@ -1462,6 +1583,46 @@ footer {
                 }
             }
         }
+    }
+    .copyright {
+        padding: 1rem 0rem;
+        border-top: 1px solid var(--color-white);
+        .text-area {
+            @media screen and(max-width:$sm-breakpoint) {
+                justify-content: center !important;
+                align-items: center !important;
+                display: flex;
+            }
+            span {
+                font-size: 0.9rem;
+                font-family: "Anybody";
+                font-weight: 400;
+                @media screen and(max-width:1440px) {
+                    font-size: 0.9rem;
+                }
+                @media screen and(max-width:$sm-breakpoint) {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+
+        .logo-area{
+            @media screen and(max-width:$sm-breakpoint) {
+                justify-content: center !important;
+                align-items: center !important;
+                display: flex;
+            }
+            img {
+                max-width: 3rem;
+                filter: invert(1);
+                object-fit: cover;
+
+                @media screen and(max-width:$sm-breakpoint) {
+                    max-width: 2rem;
+                }
+            }
+        }
+       
     }
 }
 
