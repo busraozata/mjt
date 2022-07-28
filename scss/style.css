@@ -348,30 +348,6 @@ header .header-inner nav .nav-menu .navigation li a:hover {
 
 header .header-inner .language-area {
   margin-left: 0.5rem;
-  /* img {
-                margin-right: 0.4rem;
-            }
-
-            li {
-                margin-right: 0.5rem;
-
-                &:last-child {
-                    margin-right: 0;
-                }
-
-                button {
-                    background-color: transparent;
-                    border: 0;
-                    font-weight: 900;
-                    font-size: 1rem;
-                    color: var(--color-brown);
-                    font-family: "Anybody";
-
-                    &.active {
-                        text-decoration: underline;
-                    }
-                }
-            } */
 }
 
 header .header-inner .language-area .dropdown-button {
@@ -387,6 +363,10 @@ header .header-inner .language-area [type="reset"],
 header .header-inner .language-area [type="submit"],
 header .header-inner .language-area button {
   -webkit-appearance: inherit;
+}
+
+header .header-inner .language-area .dropdown-menu {
+  min-width: 4rem;
 }
 
 @media screen and (max-width: 1200px) {
@@ -530,7 +510,7 @@ header .header-inner .language-area .dropdown-item:active {
 }
 
 .banner .content .text .btn {
-  background-color: var(--color-brown);
+  background-color: var(--color-yellow);
   z-index: 99;
   position: relative;
   color: var(--color-white);
@@ -542,7 +522,7 @@ header .header-inner .language-area .dropdown-item:active {
 }
 
 .banner .content .text .btn:hover {
-  background-color: var(--color-yellow);
+  background-color: var(--color-brown);
 }
 
 .banner .content .img-wrapper {
@@ -713,7 +693,7 @@ header .header-inner .language-area .dropdown-item:active {
 }
 
 .speed-appointment {
-  margin-top: -20rem;
+  margin-top: -17rem;
   padding: 3.7rem 0rem;
 }
 
@@ -874,6 +854,10 @@ header .header-inner .language-area .dropdown-item:active {
   height: 30px;
 }
 
+.speed-appointment .quick-appointment form .bootstrap-datetimepicker-widget.dropdown-menu {
+  display: block !important;
+}
+
 .speed-appointment .quick-appointment form .form-group ::-webkit-input-placeholder {
   /* Edge */
   font-weight: 500;
@@ -910,7 +894,7 @@ header .header-inner .language-area .dropdown-item:active {
 
 .speed-appointment .quick-appointment .button-area button {
   width: 100%;
-  background-color: var(--color-brown);
+  background-color: var(--color-yellow);
   color: var(--color-white);
   font-weight: 600;
   letter-spacing: 0.2rem;
@@ -925,7 +909,7 @@ header .header-inner .language-area .dropdown-item:active {
 }
 
 .speed-appointment .quick-appointment .button-area button:hover {
-  background-color: var(--color-yellow);
+  background-color: var(--color-brown);
 }
 
 @media screen and (max-width: 1366px) {
@@ -958,12 +942,22 @@ header .header-inner .language-area .dropdown-item:active {
   font-weight: 600;
   margin-bottom: 3rem;
   font-size: 2.3rem;
+  position: relative;
 }
 
 @media screen and (max-width: 600px) {
   .our-services .title-top h2 {
     font-size: 1.6rem;
   }
+}
+
+.our-services .title-top h2::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 3px;
+  background-color: var(--color-brown);
+  right: -2rem;
 }
 
 .our-services .title-top p {
@@ -1256,7 +1250,7 @@ header .header-inner .language-area .dropdown-item:active {
 }
 
 .why-mjt .btn {
-  background-color: var(--color-brown);
+  background-color: var(--color-yellow);
   color: var(--color-white);
   padding: 0.6rem 1.5rem;
   border-radius: 2rem 0rem 0rem 0rem;
@@ -1269,7 +1263,7 @@ header .header-inner .language-area .dropdown-item:active {
 }
 
 .why-mjt .btn:hover {
-  background-color: var(--color-yellow);
+  background-color: var(--color-brown);
 }
 
 .why-mjt .btn i {
@@ -1651,7 +1645,7 @@ footer .footer-top form .form-group .email-button {
 }
 
 footer .footer-top form .form-group .email-button button {
-  background-color: var(--color-brown);
+  background-color: var(--color-yellow);
   color: var(--color-white);
   border: none;
   border-radius: 2rem 0rem 0rem 0rem;
@@ -1672,7 +1666,7 @@ footer .footer-top form .form-group .email-button button {
 }
 
 footer .footer-top form .form-group .email-button button:hover {
-  background-color: var(--color-yellow);
+  background-color: var(--color-brown);
 }
 
 footer .footer-top form .form-check {

@@ -308,6 +308,7 @@ header {
                 -webkit-appearance: inherit;
             }
             .dropdown-menu {
+                min-width: 4rem;
                 @media screen and(max-width:$xl-breakpoint) {
                     border: none;
                     .dropdown-item {
@@ -326,30 +327,6 @@ header {
                     background-color: var(--color-yellow);
                 }
             }
-            /* img {
-                margin-right: 0.4rem;
-            }
-
-            li {
-                margin-right: 0.5rem;
-
-                &:last-child {
-                    margin-right: 0;
-                }
-
-                button {
-                    background-color: transparent;
-                    border: 0;
-                    font-weight: 900;
-                    font-size: 1rem;
-                    color: var(--color-brown);
-                    font-family: "Anybody";
-
-                    &.active {
-                        text-decoration: underline;
-                    }
-                }
-            } */
         }
     }
 }
@@ -431,7 +408,7 @@ header {
                 }
             }
             .btn {
-                background-color: var(--color-brown);
+                background-color: var(--color-yellow);
                 z-index: 99;
                 position: relative;
                 color: var(--color-white);
@@ -440,7 +417,7 @@ header {
                 padding: 0.5rem 1rem;
                 transition: 0.3s all;
                 &:hover {
-                    background-color: var(--color-yellow);
+                    background-color: var(--color-brown);
                 }
             }
         }
@@ -581,7 +558,7 @@ header {
 }
 
 .speed-appointment {
-    margin-top: -20rem;
+    margin-top: -17rem;
     padding: 3.7rem 0rem;
     @media screen and(max-width:1024px) {
         margin-top: -13rem;
@@ -711,6 +688,11 @@ header {
             .bootstrap-datetimepicker-widget table th {
                 height: 30px;
             }
+            .bootstrap-datetimepicker-widget {
+                &.dropdown-menu {
+                    display: block !important;
+                }
+            }
 
             .form-group {
                 ::-webkit-input-placeholder {
@@ -738,7 +720,7 @@ header {
 
             button {
                 width: 100%;
-                background-color: var(--color-brown);
+                background-color: var(--color-yellow);
                 color: var(--color-white);
                 font-weight: 600;
                 letter-spacing: 0.2rem;
@@ -747,7 +729,7 @@ header {
                 @include focus;
 
                 &:hover {
-                    background-color: var(--color-yellow);
+                    background-color: var(--color-brown);
                 }
                 @media screen and(max-width:1366px) {
                     font-size: 1rem;
@@ -777,8 +759,17 @@ header {
             font-weight: 600;
             margin-bottom: 3rem;
             font-size: 2.3rem;
+            position: relative;
             @media screen and(max-width:$sm-breakpoint) {
                 font-size: 1.6rem;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                height: 100%;
+                width: 3px;
+                background-color: var(--color-brown);
+                right: -2rem;
             }
         }
         p {
@@ -998,7 +989,7 @@ header {
         }
     }
     .btn {
-        background-color: var(--color-brown);
+        background-color: var(--color-yellow);
         color: var(--color-white);
         padding: 0.6rem 1.5rem;
         border-radius: 2rem 0rem 0rem 0rem;
@@ -1008,7 +999,7 @@ header {
         margin-top: 2rem;
         transition: 0.3s all;
         &:hover {
-            background-color: var(--color-yellow);
+            background-color: var(--color-brown);
         }
         i {
             margin-left: 0.5rem;
@@ -1319,7 +1310,7 @@ footer {
                     }
 
                     button {
-                        background-color: var(--color-brown);
+                        background-color: var(--color-yellow);
                         color: var(--color-white);
                         border: none;
                         border-radius: 2rem 0rem 0rem 0rem;
@@ -1335,7 +1326,7 @@ footer {
                             font-size: 1rem;
                         }
                         &:hover {
-                            background-color: var(--color-yellow);
+                            background-color: var(--color-brown);
                         }
                     }
                 }
