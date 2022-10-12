@@ -630,6 +630,99 @@ header .header-inner .right-area .language i {
           transition-duration: 1s;
 }
 
+.language-modal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999999;
+  display: none;
+  background: rgba(255, 253, 253, 0.918);
+}
+
+.language-modal .menu-bar {
+  position: absolute;
+  z-index: 9999999;
+  right: 2rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.language-modal .menu-bar i {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  color: var(--color-text-gray);
+}
+
+.language-modal .menu-bar i:hover {
+  color: var(--color-yellow);
+}
+
+.language-modal h5 {
+  color: var(--color-text-gray);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  display: block;
+  text-align: center;
+}
+
+.language-modal ul li {
+  margin-bottom: 2rem;
+  background-color: var(--color-text-gray);
+  padding: 0.8rem 2rem;
+  width: 15rem;
+  position: relative;
+  z-index: 99;
+}
+
+.language-modal ul li:hover::before {
+  width: 100%;
+}
+
+.language-modal ul li::before {
+  content: "";
+  background-color: var(--color-yellow);
+  left: 0;
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  z-index: -1;
+}
+
+.language-modal ul li.active {
+  background-color: var(--color-yellow);
+}
+
+.language-modal ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.language-modal ul li a img {
+  max-width: 3rem;
+}
+
+.language-modal ul li a span {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-left: 1.5rem;
+}
+
 @-webkit-keyframes fadein {
   from {
     opacity: 0;

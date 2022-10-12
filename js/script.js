@@ -96,4 +96,10 @@ $(document).keyup(function (e) {
   }
 });
 
+$(document).ready(function () {
+  $(".language-toggle").click(function () {
+    $(".language-modal").animate({ width: "toggle" });
+  });
+});
+
 AOS.init();

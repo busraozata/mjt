@@ -528,6 +528,89 @@ header {
     }
 }
 
+.language-modal {
+    .menu-bar {
+        position: absolute;
+        z-index: 9999999;
+        right: 2rem;
+        top: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+
+        i {
+            transition: 0.3s all;
+            color: var(--color-text-gray);
+            &:hover {
+                color: var(--color-yellow);
+            }
+        }
+    }
+   
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999999;
+    display: none;
+    background: rgba(255, 253, 253, 0.918);
+    h5 {
+        color: var(--color-text-gray);
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 4rem;
+        display: block;
+        text-align: center;
+    }
+    ul {
+       
+        li {
+            margin-bottom: 2rem;
+            background-color: var(--color-text-gray);
+            padding: 0.8rem 2rem;
+            width: 15rem;
+            position: relative;
+            z-index: 99;
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+            &::before {
+                content: "";
+                background-color: var(--color-yellow);
+                left: 0;
+                height: 100%;
+                width: 0%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                transition: 0.3s all;
+                z-index: -1;
+            }
+            &.active {
+                background-color: var(--color-yellow);
+            }
+            a {
+                display: flex;
+                align-items: center;
+                img {
+                    max-width: 3rem;
+                }
+                span {
+                    color: var(--color-white);
+                    font-weight: 600;
+                    font-size: 1.3rem;
+                    margin-left: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
 @keyframes fadein {
     from {
         opacity: 0;
@@ -1112,7 +1195,7 @@ header {
         h5 {
             margin: 2rem 0rem 1rem 0rem;
             color: var(--color-text-gray);
-            
+
             font-weight: 700;
             font-size: 1.5rem;
             transition: 0.3s all;
