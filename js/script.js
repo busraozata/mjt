@@ -2,7 +2,7 @@ $(function () {
   $(".twentytwenty-container").twentytwenty({ default_offset_pct: 0.5 });
 });
 
-const menuToggle = document.querySelector("#toggle-btn");
+/* const menuToggle = document.querySelector("#toggle-btn");
 const navigation = document.querySelector(".nav-menu");
 const headerInner = document.querySelector(".header-inner");
 const listItem = document.querySelectorAll(".list-item");
@@ -16,7 +16,7 @@ menuToggle.onclick = function () {
   } else {
     menuToggle.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
   }
-};
+}; */
 $(window).scroll(function () {
   if ($(this).scrollTop() > 100) {
     $(".header-inner").addClass("sticky");
@@ -74,6 +74,26 @@ $(document).ready(function () {
     $(".services-menu").animate({ width: "toggle" });
     $(".list").delay("200").fadeToggle("slow");
   });
+});
+
+$('a[href="#search"]').click(function () {
+  event.preventDefault();
+  $("#search-box").addClass("-open");
+  setTimeout(function () {
+    inputSearch.focus();
+  }, 800);
+});
+
+$('a[href="#close"]').click(function () {
+  event.preventDefault();
+  $("#search-box").removeClass("-open");
+});
+
+$(document).keyup(function (e) {
+  if (e.keyCode == 27) {
+    // escape key maps to keycode `27`
+    $("#search-box").removeClass("-open");
+  }
 });
 
 AOS.init();

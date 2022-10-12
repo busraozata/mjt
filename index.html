@@ -27,7 +27,7 @@
                         <div class="col-lg-12 header-area d-flex align-items-center justify-content-between">
                             <a class="navbar-brand" href="#"><img src="./img/logo.png" class="img-fluid" alt="logo"></a>
                             <nav class="d-flex align-items-center justify-content-center">
-                                <button id="toggle-btn"><i class="fa fa-bars"></i> </button>
+                               
                                 <div class="nav-menu d-flex align-items-center justify-content-between ">
                                     <ul class="navigation d-lg-flex align-items-center justify-content-center ">
                                         <li><a href="#" class="nav-link active">Ana Sayfa</a></li>
@@ -65,7 +65,9 @@
                             </nav>
                             <div class="right-area d-flex gap-4">
                                 <div class="search-area">
-                                    <img src="./img/search2.png" class="img-fluid" alt="">
+                                    <a href="#search">
+                                        <img src="./img/search2.png" class="img-fluid" alt="">
+                                    </a>
                                 </div>
                                 <div class="menu-bar services_toggle">
                                     <i class="fa-solid fa-bars"></i>
@@ -81,118 +83,234 @@
             </div>
         </nav>
     </header>
+    <div id="search-box">
+        <div class="container">
+            <a class="close" href="#close"></a>
+            <div class="search-main">
+                <div class="search-inner">
+                    <input type="text" id="inputSearch" name="firstname" placeholder="">
+                    <span class="search-info">Aramak için enter'a veya kapatmak için ESC'ye basın
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="services-menu">
-        <div class="row">
-            <div class="col-lg-6 left-area d-flex justify-content-center align-items-center" style="background-image: url(./img/sidebar-img.jpg); min-height: 100vmin; background-position: center; background-size: cover; background-repeat: no-repeat;">
-                <div class="img-wrapper">
-                    <img src="./img/logo2.png" class="img-fluid" alt="logo">
+        <!-- <button id="toggle-btn" class="d-lg-none d-flex flex-column services_toggle"><i class="fa fa-bars"></i> menu </button> -->
+        <div class="menu-bar services_toggle">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="row ">
+            <div class="col-lg-6 left-area d-lg-flex d-none justify-content-center align-items-center" style="background-image: url(./img/sidebar-img.jpg); min-height: 100vmin; background-position: center; background-size: cover; background-repeat: no-repeat;">
+                <div class="img-wrapper list">
+                    <img src="./img/logo2.png" class="img-fluid " alt="logo">
                 </div>
             </div>
             <div class="col-lg-6 right-area">
                 <div class="row">
-                   
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu2.png" class="img-fluid" alt="">
-                            <span>BÖLÜMLER</span>
-                        </a>
+
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu2.png" class="img-fluid " alt="">
+                                <span>BÖLÜMLER</span>
+                            </a>
+                        </div>
+
                     </div>
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu1.png" class="img-fluid" alt="">
-                            <span>DOKTORLAR</span>
-                        </a>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu1.png" class="img-fluid" alt="">
+                                <span>DOKTORLAR</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu4.png" class="img-fluid" alt="">
-                            <span>ONLİNE HİZMETLER</span>
-                        </a>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu4.png" class="img-fluid" alt="">
+                                <span>ONLİNE HİZMETLER</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu7.png" class="img-fluid" alt="">
-                            <span>RANDEVU TALEBİ</span>
-                        </a>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu7.png" class="img-fluid" alt="">
+                                <span>RANDEVU TALEBİ</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu8.png" class="img-fluid" alt="">
-                            <span>
-                                ANLAŞMALI KURUMLAR
-                            </span>
-                        </a>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu8.png" class="img-fluid" alt="">
+                                <span>
+                                    ANLAŞMALI KURUMLAR
+                                </span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu6.png" class="img-fluid" alt="">
-                            <span>BİZE ULAŞIN</span>
-                        </a>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu6.png" class="img-fluid" alt="">
+                                <span>BİZE ULAŞIN</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu5.png" class="img-fluid" alt="">
-                            <span>KURUMSAL</span>
-                        </a>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu5.png" class="img-fluid" alt="">
+                                <span>KURUMSAL</span>
+                            </a>
+                        </div>
                     </div>
-                   
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu3.png" class="img-fluid" alt="">
-                            <span>HASTA HAKLARI</span>
-                        </a>
+
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu3.png" class="img-fluid" alt="">
+                                <span>HASTA HAKLARI</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu2.png" class="img-fluid" alt="">
-                            <span>BÖLÜMLER</span>
-                        </a>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu2.png" class="img-fluid" alt="">
+                                <span>BÖLÜMLER</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu1.png" class="img-fluid" alt="">
-                            <span>DOKTORLAR</span>
-                        </a>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu1.png" class="img-fluid" alt="">
+                                <span>DOKTORLAR</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu4.png" class="img-fluid" alt="">
-                            <span>ONLİNE HİZMETLER</span>
-                        </a>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu4.png" class="img-fluid" alt="">
+                                <span>ONLİNE HİZMETLER</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu7.png" class="img-fluid" alt="">
-                            <span>RANDEVU TALEBİ</span>
-                        </a>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu7.png" class="img-fluid" alt="">
+                                <span>RANDEVU TALEBİ</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu8.png" class="img-fluid" alt="">
-                            <span>
-                                ANLAŞMALI KURUMLAR
-                            </span>
-                        </a>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu8.png" class="img-fluid" alt="">
+                                <span>
+                                    ANLAŞMALI KURUMLAR
+                                </span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu6.png" class="img-fluid" alt="">
-                            <span>BİZE ULAŞIN</span>
-                        </a>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu6.png" class="img-fluid" alt="">
+                                <span>BİZE ULAŞIN</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu5.png" class="img-fluid" alt="">
-                            <span>KURUMSAL</span>
-                        </a>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu5.png" class="img-fluid" alt="">
+                                <span>KURUMSAL</span>
+                            </a>
+                        </div>
                     </div>
-                   
-                    <div class="col-lg-3 my-3 d-flex justify-content-center">
-                        <a href="">
-                            <img src="./img/servicemenu3.png" class="img-fluid" alt="">
-                            <span>HASTA HAKLARI</span>
-                        </a>
+
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu3.png" class="img-fluid" alt="">
+                                <span>HASTA HAKLARI</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu2.png" class="img-fluid" alt="">
+                                <span>BÖLÜMLER</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu1.png" class="img-fluid" alt="">
+                                <span>DOKTORLAR</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu4.png" class="img-fluid" alt="">
+                                <span>ONLİNE HİZMETLER</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu7.png" class="img-fluid" alt="">
+                                <span>RANDEVU TALEBİ</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu8.png" class="img-fluid" alt="">
+                                <span>
+                                    ANLAŞMALI KURUMLAR
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu6.png" class="img-fluid" alt="">
+                                <span>BİZE ULAŞIN</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu5.png" class="img-fluid" alt="">
+                                <span>KURUMSAL</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
+                        <div class="list">
+                            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./img/servicemenu3.png" class="img-fluid" alt="">
+                                <span>HASTA HAKLARI</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -240,7 +358,7 @@
     <section class="fast-link">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-3" data-aos="fade-up" data-aos-duration="1000">
                     <div class="box d-flex flex-column justify-content-center align-items-center" style="background-color: black;">
                         <div class="icon">
                             <img src="./img/time.png" alt="">
@@ -250,7 +368,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-3" data-aos="fade-up" data-aos-duration="1000">
                     <div class="box d-flex flex-column justify-content-center align-items-center" style="background-color: black;">
                         <div class="icon">
                             <img src="./img/stethoscope1.png" alt="">
@@ -260,7 +378,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-3" data-aos="fade-up" data-aos-duration="1000">
                     <div class="box d-flex flex-column justify-content-center align-items-center" style="background-color: black;">
                         <div class="icon">
                             <img src="./img/online.png" alt="">
@@ -270,7 +388,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-3" data-aos="fade-up" data-aos-duration="1000">
                     <div class="box d-flex flex-column justify-content-center align-items-center" style="background-color: black;">
                         <div class="icon">
                             <img src="./img/lab.png" alt="">
@@ -292,57 +410,55 @@
                         <h2>Neden MJT Dental Clinic ?</h2>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="box d-flex flex-column justify-content-center align-items-center">
-                            <div class="icon" data-aos="flip-left" data-aos-duration="1000">
-                                <img src="./img/health.png" alt="">
-                            </div>
-                            <div class="info" data-aos="fade-up" data-aos-duration="1000">
-                                <h5 class="text-center">KALİTELİ HİZMET</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                                </p>
-                            </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-3">
+                    <div class="box d-flex flex-column justify-content-center align-items-center">
+                        <div class="icon" data-aos="flip-left" data-aos-duration="1000">
+                            <img src="./img/health.png" alt="">
+                        </div>
+                        <div class="info" data-aos="fade-up" data-aos-duration="1000">
+                            <h5 class="text-center">KALİTELİ HİZMET</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                            </p>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="box d-flex flex-column justify-content-center align-items-center">
-                            <div class="icon" data-aos="flip-left" data-aos-duration="1000">
-                                <img src="./img/user.png" alt="">
-                            </div>
-                            <div class="info" data-aos="fade-up" data-aos-duration="1000">
-                                <h5 class="text-center">HASTA MEMNUNİYETİ</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                                </p>
-                            </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-3">
+                    <div class="box d-flex flex-column justify-content-center align-items-center">
+                        <div class="icon" data-aos="flip-left" data-aos-duration="1000">
+                            <img src="./img/user.png" alt="">
+                        </div>
+                        <div class="info" data-aos="fade-up" data-aos-duration="1000">
+                            <h5 class="text-center">HASTA MEMNUNİYETİ</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                            </p>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="box d-flex flex-column justify-content-center align-items-center">
-                            <div class="icon" data-aos="flip-left" data-aos-duration="1000">
-                                <img src="./img/online.png" alt="">
-                            </div>
-                            <div class="info" data-aos="fade-up" data-aos-duration="1000">
-                                <h5 class="text-center">UZMAN EKİP</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                                </p>
-                            </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-3">
+                    <div class="box d-flex flex-column justify-content-center align-items-center">
+                        <div class="icon" data-aos="flip-left" data-aos-duration="1000">
+                            <img src="./img/online.png" alt="">
+                        </div>
+                        <div class="info" data-aos="fade-up" data-aos-duration="1000">
+                            <h5 class="text-center">UZMAN EKİP</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                            </p>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="box d-flex flex-column justify-content-center align-items-center">
-                            <div class="icon" data-aos="flip-left" data-aos-duration="1000">
-                                <img src="./img/businessmen.png" alt="">
-                            </div>
-                            <div class="info" data-aos="fade-up" data-aos-duration="1000">
-                                <h5 class="text-center">SİZE ÖZEL ÇÖZÜM</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                                </p>
-                            </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-3">
+                    <div class="box d-flex flex-column justify-content-center align-items-center">
+                        <div class="icon" data-aos="flip-left" data-aos-duration="1000">
+                            <img src="./img/businessmen.png" alt="">
+                        </div>
+                        <div class="info" data-aos="fade-up" data-aos-duration="1000">
+                            <h5 class="text-center">SİZE ÖZEL ÇÖZÜM</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                            </p>
                         </div>
                     </div>
                 </div>
