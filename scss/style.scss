@@ -301,22 +301,116 @@ header {
                         max-width: 1.3rem;
                     }
                 }
+                i {
+                    color: var(--color-brown);
+                    font-size: 1.5rem;
+                    transition: 0.3s all;
+                    @media screen and(max-width:$lg-breakpoint) {
+                        font-size: 1.3rem;
+                    }
+                    &:hover {
+                        color: var(--color-yellow);
+                    }
+                }
             }
             .menu-bar {
                 cursor: pointer;
                 i {
-                    color: var(--color-brown);
+                    color: var(--color-yellow);
                     font-size: 1.5rem;
                     @media screen and(max-width:$lg-breakpoint) {
                         font-size: 1.3rem;
                     }
                 }
+                label.hamburger {
+                    display: block;
+                    background: #fff;
+                    width: 35px; /* less width = square hamburger */
+                    position: relative;
+                    cursor: pointer;
+                }
+
+                input#hamburger {
+                    display: none;
+                }
+                &:hover {
+                    .line {
+                        &::before {
+                            right: 100%;
+                        }
+                    }
+                }
+
+                .line {
+                    position: absolute;
+                    height: 5px;
+                    width: 100%;
+                    background: var(--color-brown);
+                    transition: 0.5s;
+                    overflow: hidden;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: -50%;
+                        height: 5px;
+                        width: 50%;
+                        background: var(--color-yellow);
+                        -webkit-transition: all 0.4s cubic-bezier(0.45, 0.05, 0.3, 0.93);
+                        transition: all 0.4s cubic-bezier(0.45, 0.05, 0.3, 0.93);
+                    }
+                }
+                /* steps of 12 are optional, could also be 10, 13 etc */
+                .line:nth-child(1) {
+                    top: 0;
+                    &::before {
+                        transition-delay: 0.1s;
+                    }
+                }
+                .line:nth-child(2) {
+                    top: 10px;
+                    &::before {
+                        transition-delay: 75ms;
+                    }
+                }
+                .line:nth-child(3) {
+                    top: 20px;
+                    &::before {
+                        transition-delay: 50ms;
+                    }
+                }
+
+                /*  
+                #hamburger:checked + .hamburger .line:nth-child(1) {
+                    transform: translateY(12px) rotate(-45deg);
+                }
+
+                #hamburger:checked + .hamburger .line:nth-child(2) {
+                    opacity: 0;
+                }
+
+                #hamburger:checked + .hamburger .line:nth-child(3) {
+                    transform: translateY(-12px) rotate(45deg);
+                } */
             }
             .language {
                 cursor: pointer;
                 span {
-                    font-weight: 700;
-                    font-size: 0.9rem;
+                    font-weight: 900;
+                    font-size: 0.8rem;
+                    color: var(--color-brown);
+                }
+                &:hover {
+                    span,
+                    i {
+                        color: var(--color-yellow);
+                    }
+                }
+                i {
+                    color: var(--color-brown);
+                    font-size: 1.3rem;
+                    transition: 0.3s all;
                 }
             }
         }
@@ -356,7 +450,7 @@ header {
             content: " ";
             height: 33px;
             width: 2px;
-            background-color: white;
+            background-color: var(--color-black);
         }
         .close:before {
             transform: rotate(45deg);
@@ -382,9 +476,9 @@ header {
                 padding: 12px 74px 12px 0;
                 font-size: 2rem;
                 height: 84px;
-                border-bottom: 2px solid white;
+                border-bottom: 2px solid black;
                 display: block;
-                color: white;
+                color: var(--color-black);
                 margin-bottom: 0;
                 width: 100%;
                 transform: scale3d(0, 1, 1);
@@ -409,7 +503,7 @@ header {
             }
             .search-info {
                 display: block;
-                color: white;
+                color: var(--color-black);
                 text-align: right;
                 float: right;
                 margin-top: 4px;
@@ -419,7 +513,7 @@ header {
     }
 
     &.-open {
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(255, 253, 253, 0.918);
         visibility: visible;
         animation: fadein 0.8s;
         .container {
@@ -498,8 +592,13 @@ header {
         top: 1rem;
         font-size: 1.5rem;
         cursor: pointer;
+
         i {
+            transition: 0.3s all;
             color: var(--color-text-gray);
+            &:hover {
+                color: var(--color-yellow);
+            }
         }
     }
     .list {
@@ -528,8 +627,19 @@ header {
         @media screen and(max-width:$sm-breakpoint) {
             padding: 2 1rem;
         }
+        .list {
+            &:hover {
+                img {
+                    filter: grayscale(1);
+                }
+                span {
+                    color: var(--color-yellow);
+                }
+            }
+        }
         img {
             max-width: 3.4rem;
+            transition: 0.3s all;
             @media screen and (max-width: 1440px) {
                 max-width: 2.3rem;
             }
@@ -538,6 +648,7 @@ header {
             color: var(--color-text-gray);
         }
         span {
+            transition: 0.3s all;
             margin-top: 1rem;
             font-weight: 600;
             font-size: 1rem;
@@ -696,22 +807,128 @@ header {
     @media screen and(max-width:$xl-breakpoint) {
         margin-top: 2rem;
     }
+    .col-xl-3 {
+        &:nth-child(1) {
+            &:hover {
+                .box {
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+            .box {
+                &:before {
+                    content: "";
+                    background: rgb(190, 191, 192);
+                    background: linear-gradient(90deg, rgba(190, 191, 192, 1) 41%, rgba(195, 196, 197, 1) 71%);
+                }
+                background: rgb(223, 203, 116);
+                background: linear-gradient(
+                    90deg,
+                    rgba(223, 203, 116, 1) 5%,
+                    rgba(227, 209, 121, 1) 30%,
+                    rgba(230, 212, 121, 1) 54%,
+                    rgba(227, 202, 112, 1) 80%,
+                    rgba(223, 188, 99, 1) 92%
+                );
+            }
+        }
+        &:nth-child(2) {
+            &:hover {
+                .box {
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+            .box {
+                &:before {
+                    content: "";
+                    background: rgb(190, 191, 192);
+                    background: linear-gradient(90deg, #bebfc0 41%, #9c9ea1 71%);
+                }
+                background: rgb(230, 210, 120);
+                background: linear-gradient(
+                    90deg,
+                    rgba(230, 210, 120, 1) 5%,
+                    rgba(227, 201, 111, 1) 30%,
+                    rgba(225, 194, 104, 1) 54%,
+                    rgba(221, 185, 96, 1) 80%,
+                    rgba(215, 172, 84, 1) 92%
+                );
+            }
+        }
+        &:nth-child(3) {
+            &:hover {
+                .box {
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+            .box {
+                &:before {
+                    content: "";
+                    background: rgb(190, 191, 192);
+                    background: linear-gradient(90deg, #bebfc0 41%, #9c9ea1 71%);
+                }
+                background: rgb(223, 189, 100);
+                background: linear-gradient(
+                    90deg,
+                    rgba(223, 189, 100, 1) 5%,
+                    rgba(220, 180, 91, 1) 30%,
+                    rgba(210, 167, 81, 1) 54%,
+                    rgba(199, 156, 74, 1) 80%,
+                    rgba(192, 150, 69, 1) 92%
+                );
+            }
+        }
+        &:nth-child(4) {
+            &:hover {
+                .box {
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+            .box {
+                &:before {
+                    content: "";
+                    background: rgb(190, 191, 192);
+                    background: linear-gradient(90deg, #78797a 71%, #78797a 71%);
+                }
+                background: rgb(209, 166, 80);
+                background: linear-gradient(
+                    90deg,
+                    rgba(209, 166, 80, 1) 5%,
+                    rgba(197, 155, 72, 1) 30%,
+                    rgba(197, 155, 72, 1) 54%,
+                    rgba(197, 155, 72, 1) 80%,
+                    rgba(197, 155, 72, 1) 92%
+                );
+            }
+        }
+    }
+
     .box {
         height: 21rem;
-        background: rgb(224, 204, 117);
         padding: 2rem 0;
         border-radius: 3rem 0 0 0;
+        position: relative;
+        z-index: 99;
+        overflow: hidden;
         @media screen and(max-width:$lg-breakpoint) {
             border-radius: 0;
         }
-        background: rgb(224, 203, 116);
-        background: linear-gradient(
-            90deg,
-            rgba(224, 203, 116, 1) 5%,
-            rgba(230, 213, 123, 1) 30%,
-            rgba(225, 195, 106, 1) 54%,
-            rgba(190, 147, 68, 1) 80%
-        );
+
+        &:before {
+            height: 100%;
+            width: 0%;
+            left: 0;
+            position: absolute;
+            transition: 0.3s all;
+            z-index: -1;
+        }
 
         .icon {
             img {
@@ -730,14 +947,14 @@ header {
             justify-content: center;
             h5 {
                 color: var(--color-white);
-                font-weight: 700;
+                font-weight: 900;
                 text-align: center;
-                font-size: 1.6rem;
+                font-size: 1.8rem;
                 margin-top: 3rem;
                 text-align: center;
                 max-width: 10rem;
                 @media screen and(max-width:1440px) {
-                    font-size: 1.3rem;
+                    font-size: 1.5rem;
                 }
                 @media screen and(max-width:$lg-breakpoint) {
                     max-width: 100%;
@@ -754,7 +971,7 @@ header {
     @media screen and(max-width:$xl-breakpoint) {
         padding: 4rem 0rem;
     }
-   
+
     .title {
         margin-bottom: 7rem;
         @media screen and(max-width:$lg-breakpoint) {
@@ -763,6 +980,7 @@ header {
         h2 {
             font-family: "adelia";
             text-align: center;
+            letter-spacing: 8px;
             color: var(--color-text-gray);
             @media screen and(max-width:$xl-breakpoint) {
                 font-size: 1.5rem;
@@ -770,18 +988,107 @@ header {
             @media screen and(max-width:$lg-breakpoint) {
                 font-size: 1.3rem;
             }
+            @media screen and(max-width:$sm-breakpoint) {
+                line-height: 3;
+                font-size: 1.1rem;
+            }
+        }
+    }
+    .col-xl-3 {
+        &:nth-child(2) {
+            &:hover {
+                .icon {
+                    background: rgb(190, 191, 192);
+                    background: linear-gradient(90deg, rgba(190, 191, 192, 1) 41%, rgba(195, 196, 197, 1) 71%);
+                }
+            }
+            .icon {
+                -webkit-transition: background-color 1000ms linear;
+                -ms-transition: background-color 1000ms linear;
+                transition: background-color 1000ms linear;
+                background-position: 0 0;
+                transition: 0.3s all;
+                background: rgb(223, 203, 116);
+                background-image: linear-gradient(
+                    90deg,
+                    rgba(223, 203, 116, 1) 5%,
+                    rgba(227, 209, 121, 1) 30%,
+                    rgba(230, 212, 121, 1) 54%,
+                    rgba(227, 202, 112, 1) 80%,
+                    rgba(223, 188, 99, 1) 92%
+                );
+            }
+        }
+        &:nth-child(3) {
+            &:hover {
+                .icon {
+                    background: rgb(190, 191, 192);
+                    background: linear-gradient(90deg, #bebfc0 41%, #9c9ea1 71%);
+                }
+            }
+
+            .icon {
+                background: rgb(230, 210, 120);
+                background: linear-gradient(
+                    90deg,
+                    rgba(230, 210, 120, 1) 5%,
+                    rgba(227, 201, 111, 1) 30%,
+                    rgba(225, 194, 104, 1) 54%,
+                    rgba(221, 185, 96, 1) 80%,
+                    rgba(215, 172, 84, 1) 92%
+                );
+            }
+        }
+        &:nth-child(4) {
+            &:hover {
+                .icon {
+                    background: rgb(190, 191, 192);
+                    background: linear-gradient(90deg, #a3a4a5 41%, #78797a 71%);
+                }
+            }
+            .icon {
+                background: rgb(223, 189, 100);
+                background: linear-gradient(
+                    90deg,
+                    rgba(223, 189, 100, 1) 5%,
+                    rgba(220, 180, 91, 1) 30%,
+                    rgba(210, 167, 81, 1) 54%,
+                    rgba(199, 156, 74, 1) 80%,
+                    rgba(192, 150, 69, 1) 92%
+                );
+            }
+        }
+        &:nth-child(5) {
+            &:hover {
+                .icon {
+                    background: rgb(190, 191, 192);
+                    background: linear-gradient(90deg, #78797a 71%, #78797a 71%);
+                }
+            }
+            .icon {
+                background: rgb(209, 166, 80);
+                background: linear-gradient(
+                    90deg,
+                    rgba(209, 166, 80, 1) 5%,
+                    rgba(197, 155, 72, 1) 30%,
+                    rgba(197, 155, 72, 1) 54%,
+                    rgba(197, 155, 72, 1) 80%,
+                    rgba(197, 155, 72, 1) 92%
+                );
+            }
         }
     }
     .box {
+        &:hover {
+            h5 {
+                color: var(--color-yellow);
+            }
+            .icon {
+                scale: 1.1;
+            }
+        }
         .icon {
-            background: rgb(224, 203, 116);
-            background: linear-gradient(
-                90deg,
-                rgba(224, 203, 116, 1) 5%,
-                rgba(230, 213, 123, 1) 30%,
-                rgba(225, 195, 106, 1) 54%,
-                rgba(190, 147, 68, 1) 80%
-            );
+            transition: 0.4s all;
             border-radius: 50%;
             height: 8rem;
             width: 8rem;
@@ -793,8 +1100,8 @@ header {
                 width: 7rem;
             }
             img {
-                height: 4rem;
-                width: 4rem;
+                height: 5rem;
+                width: 5rem;
                 object-fit: contain;
                 @media screen and(max-width:$xl-breakpoint) {
                     height: 3rem;
@@ -805,8 +1112,10 @@ header {
         h5 {
             margin: 2rem 0rem 1rem 0rem;
             color: var(--color-text-gray);
+            
             font-weight: 700;
             font-size: 1.5rem;
+            transition: 0.3s all;
             @media screen and(max-width:1366px) {
                 font-size: 1.3rem;
             }
@@ -876,6 +1185,29 @@ header {
             padding: 0rem 1rem;
         }
         .swiper-slide {
+            &:hover {
+                .icon-image {
+                    filter: grayscale(1);
+                }
+                h4 {
+                    color: var(--color-yellow) !important;
+                }
+                a {
+                    color: var(--color-yellow) !important;
+                    i {
+                        color: var(--color-yellow) !important;
+                    }
+                }
+                .img-wrapper {
+                    &::before {
+                        transition-delay: 75ms;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
             text-align: center;
             font-size: 18px;
             background: var(--color-white);
@@ -898,6 +1230,23 @@ header {
             overflow: hidden;
             position: relative;
             z-index: 99;
+            .img-wrapper {
+                position: relative;
+                overflow: hidden;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -100%;
+                    right: -100%;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 999;
+                    background: #e1c06756;
+                    -webkit-transition: all 0.4s cubic-bezier(0.45, 0.05, 0.3, 0.93);
+                    transition: all 0.4s cubic-bezier(0.45, 0.05, 0.3, 0.93);
+                }
+            }
 
             .service-img {
                 display: block;
@@ -923,11 +1272,13 @@ header {
                     margin-top: 2rem;
                     .icon-image {
                         max-width: 3.5rem;
+                        transition: 0.3s all;
                         @media screen and(max-width:$lg-breakpoint) {
                             max-width: 2.5rem;
                         }
                     }
                     h4 {
+                        transition: 0.3s all;
                         color: var(--color-text-gray);
                         font-weight: 600;
                         margin-left: 1rem;
@@ -953,8 +1304,13 @@ header {
                         color: var(--color-text-gray);
                         font-weight: 600;
                         font-size: 1rem;
+                        transition: 0.3s all;
                         @media screen and(max-width:$sm-breakpoint) {
                             font-size: 0.9rem;
+                        }
+                        &:focus {
+                            box-shadow: none;
+                            outline: none;
                         }
                     }
                     i {

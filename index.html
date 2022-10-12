@@ -15,6 +15,7 @@
     <link rel='stylesheet' href='https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css'>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/regular.min.css" integrity="sha512-aNH2ILn88yXgp/1dcFPt2/EkSNc03f9HBFX0rqX3Kw37+vjipi1pK3L9W08TZLhMg4Slk810sPLdJlNIjwygFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./scss/style.css">
 </head>
 
@@ -27,7 +28,7 @@
                         <div class="col-lg-12 header-area d-flex align-items-center justify-content-between">
                             <a class="navbar-brand" href="#"><img src="./img/logo.png" class="img-fluid" alt="logo"></a>
                             <nav class="d-flex align-items-center justify-content-center">
-                               
+
                                 <div class="nav-menu d-flex align-items-center justify-content-between ">
                                     <ul class="navigation d-lg-flex align-items-center justify-content-center ">
                                         <li><a href="#" class="nav-link active">Ana Sayfa</a></li>
@@ -66,14 +67,22 @@
                             <div class="right-area d-flex gap-4">
                                 <div class="search-area">
                                     <a href="#search">
-                                        <img src="./img/search2.png" class="img-fluid" alt="">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
                                     </a>
                                 </div>
                                 <div class="menu-bar services_toggle">
-                                    <i class="fa-solid fa-bars"></i>
+                                  <!--   <i class="fa-solid fa-bars"></i> -->
+                                    
+                                    <label for="hamburger" class="hamburger " class="">
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                    </label>
                                 </div>
                                 <div class="language d-flex flex-column align-items-center">
-                                    <img src="./img/world.png" class="img-fluid" alt="">
+                                   <!--  <img src="./img/world.png" class="img-fluid" alt=""> -->
+                                   
+                                    <i class="fa-solid fa-globe"></i>
                                     <span>TR</span>
                                 </div>
                             </div>
@@ -359,7 +368,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-6 col-md-6 mb-3" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="box d-flex flex-column justify-content-center align-items-center" style="background-color: black;">
+                    <div class="box d-flex flex-column justify-content-center align-items-center">
                         <div class="icon">
                             <img src="./img/time.png" alt="">
                         </div>
@@ -369,7 +378,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 mb-3" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="box d-flex flex-column justify-content-center align-items-center" style="background-color: black;">
+                    <div class="box d-flex flex-column justify-content-center align-items-center">
                         <div class="icon">
                             <img src="./img/stethoscope1.png" alt="">
                         </div>
@@ -379,7 +388,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 mb-3" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="box d-flex flex-column justify-content-center align-items-center" style="background-color: black;">
+                    <div class="box d-flex flex-column justify-content-center align-items-center" >
                         <div class="icon">
                             <img src="./img/online.png" alt="">
                         </div>
@@ -389,7 +398,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 mb-3" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="box d-flex flex-column justify-content-center align-items-center" style="background-color: black;">
+                    <div class="box d-flex flex-column justify-content-center align-items-center" >
                         <div class="icon">
                             <img src="./img/lab.png" alt="">
                         </div>
@@ -478,7 +487,9 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide" data-aos="zoom-in-up" data-aos-duration="500">
                                     <div class="box">
-                                        <img src="./img/service.png" class="img-fluid service-img" alt="">
+                                        <div class="img-wrapper">
+                                            <img src="./img/service.png" class="img-fluid service-img" alt="">
+                                        </div>
                                         <div class="content-text">
                                             <div class="title d-flex align-items-end justify-content-center">
                                                 <div class="icon">
@@ -504,7 +515,9 @@
                                 </div>
                                 <div class="swiper-slide" data-aos="zoom-in-up" data-aos-duration="500">
                                     <div class="box">
-                                        <img src="./img/service.png" class="img-fluid service-img" alt="">
+                                        <div class="img-wrapper">
+                                            <img src="./img/service.png" class="img-fluid service-img" alt="">
+                                        </div>
                                         <div class="content-text">
                                             <div class="title d-flex align-items-end justify-content-center">
                                                 <div class="icon">
@@ -530,7 +543,9 @@
                                 </div>
                                 <div class="swiper-slide" data-aos="zoom-in-up" data-aos-duration="500">
                                     <div class="box">
-                                        <img src="./img/service.png" class="img-fluid service-img" alt="">
+                                        <div class="img-wrapper">
+                                            <img src="./img/service.png" class="img-fluid service-img" alt="">
+                                        </div>
                                         <div class="content-text">
                                             <div class="title d-flex align-items-end justify-content-center">
                                                 <div class="icon">
@@ -556,7 +571,9 @@
                                 </div>
                                 <div class="swiper-slide" data-aos="zoom-in-up" data-aos-duration="500">
                                     <div class="box">
-                                        <img src="./img/service.png" class="img-fluid service-img" alt="">
+                                        <div class="img-wrapper">
+                                            <img src="./img/service.png" class="img-fluid service-img" alt="">
+                                        </div>
                                         <div class="content-text">
                                             <div class="title d-flex align-items-end justify-content-center">
                                                 <div class="icon">
@@ -582,7 +599,9 @@
                                 </div>
                                 <div class="swiper-slide" data-aos="zoom-in-up" data-aos-duration="500">
                                     <div class="box">
-                                        <img src="./img/service.png" class="img-fluid service-img" alt="">
+                                        <div class="img-wrapper">
+                                            <img src="./img/service.png" class="img-fluid service-img" alt="">
+                                        </div>
                                         <div class="content-text">
                                             <div class="title d-flex align-items-end justify-content-center">
                                                 <div class="icon">
