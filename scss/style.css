@@ -594,6 +594,13 @@ header .header-inner .right-area .language i {
   outline: none;
 }
 
+@media screen and (max-width: 991px) {
+  #search-box .container .search-main input {
+    font-size: 1.3rem;
+    height: 56px;
+  }
+}
+
 #search-box .container .search-main button {
   border: 0;
   left: auto;
@@ -614,6 +621,12 @@ header .header-inner .right-area .language i {
   float: right;
   margin-top: 4px;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 991px) {
+  #search-box .container .search-main .search-info {
+    font-size: 0.9rem;
+  }
 }
 
 #search-box.-open {
