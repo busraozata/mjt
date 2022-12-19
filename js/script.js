@@ -68,7 +68,30 @@ var swiper = new Swiper(".ourServices", {
     },
   },
 });
-
+var swiper = new Swiper(".mySwiperLastPosts", {
+  direction: "vertical",
+  autoplay: {
+    delay: 1500,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 45,
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 5,
+    },
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 $(document).ready(function () {
   $(".services_toggle").click(function () {
     $(".services-menu").animate({ width: "toggle" });
@@ -101,5 +124,19 @@ $(document).ready(function () {
     $(".language-modal").animate({ width: "toggle" });
   });
 });
+
+$(function () {
+  $("#datepicker").datepicker({
+    autoclose: true,
+    todayHighlight: true,
+  });
+  /* .datepicker("update", new Date()); */
+});
+
+$("#preloader")
+  .delay(1000)
+  .fadeOut("slow", function () {
+    $(this).remove();
+  });
 
 AOS.init();
