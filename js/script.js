@@ -125,14 +125,83 @@ $(document).ready(function () {
   });
 });
 
-$(function () {
+/* $(function () {
   $("#datepicker").datepicker({
     autoclose: true,
     todayHighlight: true,
   });
-  /* .datepicker("update", new Date()); */
+}); */
+/* $(function () {
+  $("#datetimepicker").datepicker({
+    dateFormat: "yy-mm-dd", //修改顯示順序
+  });
+
+  $("#timepicker").timepicker({
+    timeFormat: "h:mm p", // 時間隔式
+    interval: 30, //時間間隔
+    minTime: "06", //最小時間
+    maxTime: "23:55pm", //最大時間
+    defaultTime: "06", //預設起始時間
+    startTime: "01:00", // 開始時間
+    dynamic: true, //是否顯示項目，使第一個項目按時間順序緊接在所選時間之後
+    dropdown: true, //是否顯示時間條目的下拉列表
+    scrollbar: false, //是否顯示捲軸
+  });
+}); */
+
+var swiper = new Swiper(".mySwiperGalleryArea", {
+  spaceBetween: 0,
+  autoplay: {
+    delay: 1500,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 0,
+    },
+    1300: {
+      slidesPerView: 4,
+      spaceBetween: 0,
+    },
+  },
 });
 
+var swiper = new Swiper(".ourServices-section", {
+  spaceBetween: 60,
+
+  loop: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1300: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+  },
+});
 $("#preloader")
   .delay(1000)
   .fadeOut("slow", function () {
