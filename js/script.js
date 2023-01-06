@@ -2,21 +2,10 @@ $(function () {
   $(".twentytwenty-container").twentytwenty({ default_offset_pct: 0.5 });
 });
 
-/* const menuToggle = document.querySelector("#toggle-btn");
+const menuToggle = document.querySelector(".hamburger-bar");
 const navigation = document.querySelector(".nav-menu");
-const headerInner = document.querySelector(".header-inner");
-const listItem = document.querySelectorAll(".list-item");
-menuToggle.onclick = function () {
-  menuToggle.classList.toggle("active");
-  navigation.classList.toggle("active");
-  headerInner.classList.toggle("bg-white");
 
-  if (menuToggle.innerHTML === `<i class="fa-solid fa-xmark"></i>`) {
-    menuToggle.innerHTML = `<i class="fa-solid fa-bars"></i>`;
-  } else {
-    menuToggle.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
-  }
-}; */
+
 $(window).scroll(function () {
   if ($(this).scrollTop() > 100) {
     $(".header-inner").addClass("sticky");
@@ -29,9 +18,9 @@ var swiper = new Swiper(".mySwiperBanner", {
   slidesPerView: 1,
 
   direction: "vertical",
-  autoplay: {
+ /*  autoplay: {
     delay: 3000,
-  },
+  }, */
   loop: true,
   pagination: {
     el: ".swiper-pagination",
@@ -98,6 +87,19 @@ $(document).ready(function () {
     $(".list").delay("200").fadeToggle("slow");
   });
 });
+
+$(document).ready(function () {
+  $(".hamburger-nav").click(function () {
+    $(".nav-menu").animate({ width: "toggle" });
+    $(".list").delay("200").fadeToggle("slow");
+  });
+});
+/* $(document).ready(function () {
+  $(".hamburger-menu").click(function () {
+    $(".nav-menu").animate({ width: "toggle" });
+    $(".list").delay("200").fadeToggle("slow");
+  });
+}); */
 
 $('a[href="#search"]').click(function () {
   event.preventDefault();
@@ -173,12 +175,18 @@ var swiper = new Swiper(".mySwiperGalleryArea", {
     },
   },
 });
-
+/* $("ul li.dropdown").hover(
+  function () {
+    $(this).find(".dropdown-menu").stop(true, true).delay(200).fadeIn(500);
+  },
+  function () {
+    $(this).find(".dropdown-menu").stop(true, true).delay(200).fadeOut(500);
+  }
+); */
 var swiper = new Swiper(".ourServices-section", {
   spaceBetween: 60,
-
   loop: true,
-
+  autoplay: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -209,3 +217,12 @@ $("#preloader")
   });
 
 AOS.init();
+
+/* ------------------------------------------------------------- */
+
+$(".mega-menu .sub-item .dropdown-item").on("mouseover", function () {
+  var imgPath = $(this).attr("data-image");
+
+  $(".mega-menu .img-wrapper img").attr("src", imgPath);
+});
+/* ------------------------------------------------------------- */

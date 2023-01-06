@@ -33,17 +33,61 @@
                             <a class="navbar-brand" href="index.html"><img src="./img/logo.png" class="img-fluid" alt="logo"></a>
                             <nav class="d-flex align-items-center justify-content-center">
 
-                                <div class="nav-menu d-flex align-items-center justify-content-between ">
+                                <div class="nav-menu d-none d-lg-flex align-items-center justify-content-between ">
                                     <ul class="navigation d-lg-flex align-items-center justify-content-center ">
                                         <li><a href="index.html" class="nav-link ">Ana Sayfa</a></li>
-                                        <li><a class="nav-link" href="about.html">Kurumsal</a></li>
-                                        <li>
-                                            <a class="nav-link " href="doctors.html">Doktorlarımız</a>
+                                        <li class="dropdown"><a class="nav-link  dropdown-toggle" href="about.html">Kurumsal</a>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <li><a class="dropdown-item" href="#">Hakkımızda</a></li>
+                                                <li><a class="dropdown-item" href="#">Misyonumuz ve Vizyonumuz</a></li>
+                                            </ul>
                                         </li>
                                         <li>
-                                            <a class="nav-link active" href="services.html">Tedavilerimiz</a>
+                                            <a class="nav-link" href="doctors.html">Doktorlarımız</a>
+
                                         </li>
-                                        <li><a class="nav-link " href="blog.html">Blog</a> </li>
+                                        <li class="dropdown"><a class="nav-link active dropdown-toggle" href="services.html" id="dropdownMenuButton1">Tedavilerimiz</a>
+                                            <div class="dropdown-menu mega-menu" aria-labelledby="defaultDropdown">
+                                                <div class="row">
+                                                    <div class="col-lg-6 d-xl-block d-none">
+                                                        <div class="img-wrapper h-100">
+                                                            <img src="./img/Dental-Clinics-London-2.jpg" class="img-fluid" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <ul class="sub-item">
+
+                                                            <li class="dropdown-item" data-image="./img/Dental-Clinics-London.jpg"><a href="service-detail.html">İmplant
+                                                                    Diş</a>
+                                                            </li>
+                                                            <li class="dropdown-item" data-image="./img/Dental-Clinics-London-2.jpg"><a href="#">Ortodonti</a>
+                                                            </li>
+                                                            <li class="dropdown-item" data-image="./img/Dental-Clinics-London-3.jpg"><a href="#">Diş
+                                                                    Beyazlatma
+                                                                </a>
+                                                            </li>
+                                                            <li class="dropdown-item" data-image="./img/Dental-Clinics-London.jpg"><a href="#">Diş Temizliği </a></li>
+                                                            <li class="dropdown-item" data-image="./img/Dental-Clinics-London-2.jpg"><a href="#">Sterilizasyon </a></li>
+                                                            <li class="dropdown-item" data-image="./img/Dental-Clinics-London-3.jpg"> <a href="#">Porcelen Diş Teli </a></li>
+
+                                                            <li class="dropdown-item" data-image="./img/Dental-Clinics-London.jpg"><a href="service-detail.html">İmplant Diş</a>
+                                                            </li>
+                                                            <li class="dropdown-item" data-image="./img/Dental-Clinics-London.jpg"><a href="#">Ortodonti</a></li>
+                                                            <li class="dropdown-item" data-image="./img/Dental-Clinics-London-2.jpg"><a href="#">Diş Beyazlatma </a></li>
+                                                            <li class="dropdown-item" data-image="./img/Dental-Clinics-London.jpg"><a href="#">Diş Temizliği </a></li>
+                                                            <li class="dropdown-item" data-image="./img/Dental-Clinics-London-3.jpg"><a href="#">Sterilizasyon </a></li>
+
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li><a class="nav-link" href="blog.html">Blog</a>
+
+                                        </li>
                                         <li><a href="contact.html" class="nav-link">İletişim</a></li>
                                     </ul>
 
@@ -67,12 +111,14 @@
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </a>
                                 </div>
+
                                 <div class="menu-bar services_toggle">
                                     <label for="hamburger" class="hamburger " class="">
                                         <span class="line"></span>
                                         <span class="line"></span>
                                         <span class="line"></span>
                                     </label>
+
                                 </div>
                                 <div class="language d-flex flex-column align-items-center language-toggle">
                                     <i class="fa-solid fa-globe"></i>
@@ -103,6 +149,68 @@
         <div class="menu-bar services_toggle">
             <i class="fa-solid fa-xmark"></i>
         </div>
+        <div class="row d-lg-none d-block">
+            <div class="nav-menu d-flex align-items-center justify-content-between ">
+                <ul class="navigation d-lg-none d-flex flex-column align-items-start justify-content-center ">
+                    <li><a href="index.html" class="nav-link ">Ana Sayfa</a></li>
+                    <li class="dropdown"><a class="nav-link  dropdown-toggle" href="about.html">Kurumsal</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Hakkımızda</a></li>
+                            <li><a class="dropdown-item" href="#">Misyonumuz ve Vizyonumuz</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="doctors.html">Doktorlarımız</a>
+
+                    </li>
+                    <li class="dropdown"><a class="nav-link active dropdown-toggle" href="services.html" id="dropdownMenuButton1">Tedavilerimiz</a>
+                        <div class="dropdown-menu mega-menu" aria-labelledby="defaultDropdown">
+                            <div class="row">
+                                <div class="col-lg-6 d-xl-block d-none">
+                                    <div class="img-wrapper h-100">
+                                        <img src="./img/Dental-Clinics-London-2.jpg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <ul class="sub-item">
+
+                                        <li class="dropdown-item" data-image="./img/Dental-Clinics-London.jpg"><a href="service-detail.html">İmplant
+                                                Diş</a>
+                                        </li>
+                                        <li class="dropdown-item" data-image="./img/Dental-Clinics-London-2.jpg"><a href="#">Ortodonti</a>
+                                        </li>
+                                        <li class="dropdown-item" data-image="./img/Dental-Clinics-London-3.jpg"><a href="#">Diş
+                                                Beyazlatma
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-item" data-image="./img/Dental-Clinics-London.jpg"><a href="#">Diş Temizliği </a></li>
+                                        <li class="dropdown-item" data-image="./img/Dental-Clinics-London-2.jpg"><a href="#">Sterilizasyon </a></li>
+                                        <li class="dropdown-item" data-image="./img/Dental-Clinics-London-3.jpg"> <a href="#">Porcelen Diş Teli </a></li>
+
+                                        <li class="dropdown-item" data-image="./img/Dental-Clinics-London.jpg"><a href="service-detail.html">İmplant Diş</a>
+                                        </li>
+                                        <li class="dropdown-item" data-image="./img/Dental-Clinics-London.jpg"><a href="#">Ortodonti</a></li>
+                                        <li class="dropdown-item" data-image="./img/Dental-Clinics-London-2.jpg"><a href="#">Diş Beyazlatma </a></li>
+                                        <li class="dropdown-item" data-image="./img/Dental-Clinics-London.jpg"><a href="#">Diş Temizliği </a></li>
+                                        <li class="dropdown-item" data-image="./img/Dental-Clinics-London-3.jpg"><a href="#">Sterilizasyon </a></li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li><a class="nav-link" href="blog.html">Blog</a>
+
+                    </li>
+                    <li><a href="contact.html" class="nav-link">İletişim</a></li>
+                </ul>
+
+
+            </div>
+        </div>
         <div class="row ">
             <div class="col-lg-6 left-area d-lg-flex d-none justify-content-center align-items-center" style="background-image: url(./img/sidebar-img.jpg); min-height: 100vmin; background-position: center; background-size: cover; background-repeat: no-repeat;">
                 <div class="img-wrapper list">
@@ -114,7 +222,7 @@
 
                     <div class="col-lg-3 col-md-3 col-6 my-3 d-flex justify-content-center">
                         <div class="list">
-                              <a href="sections.html" class="d-flex flex-column justify-content-center align-items-center">
+                            <a href="sections.html" class="d-flex flex-column justify-content-center align-items-center">
                                 <img src="./img/servicemenu2.png" class="img-fluid " alt="">
                                 <span>BÖLÜMLER</span>
                             </a>
